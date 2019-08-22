@@ -1,5 +1,7 @@
 # APK Decompiler
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/morxander/apk_decompiler) ![MicroBadger Size](https://img.shields.io/microbadger/image-size/morxander/apk_decompiler) ![Docker Pulls](https://img.shields.io/docker/pulls/morxander/apk_decompiler)
+
 
 ##  Requirements
 - Docker
