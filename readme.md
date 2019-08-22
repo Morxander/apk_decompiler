@@ -7,16 +7,16 @@
 - Docker
 
 ## How to use
-Clone the repo then navigate to the repo directory to build the image :
+Pull the image :
 
 ```bash
-docker build . -t apk_decompiler
+docker pull morxander/apk_decompiler:latest
 ```
 
 Then navigate to the `apk` file directory and execute the following command :
 
 ```bash
-docker run --rm -v $(pwd):/apk apk_decompiler apktool d /apk/{apk_file_name.apk} -o /apk/output
+docker run --rm -v $(pwd):/apk morxander/apk_decompiler apktool d /apk/{apk_file_name.apk} -o /apk/output
 ```
 
 You should find a directory called `output`  with the decompiled apk files.
@@ -25,7 +25,7 @@ To make it easy in the future you can add it as function in your `bashrc` :
 
 ```bash
 function  decompile_apk {
-	docker run --rm -v $(pwd):/apk apk_decompiler /usr/local/bin/apktool d /apk/$1 -o /apk/output
+	docker run --rm -v $(pwd):/apk morxander/apk_decompiler apktool d /apk/$1 -o /apk/output
 }
 ```
 
