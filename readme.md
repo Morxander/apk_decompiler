@@ -24,8 +24,8 @@ You should find a directory called `output`  with the decompiled apk files.
 To make it easy in the future you can add it as function in your `bashrc` :
 
 ```bash
-function  decompile_apk {
-	docker run --rm -v $(pwd):/apk morxander/apk_decompiler apktool d /apk/$1 -o /apk/output
+function decompile_apk {
+	docker run --rm -v $(pwd):/apk morxander/apk_decompiler apktool d /apk/$1 -o /apk/$1_output
 }
 ```
 
